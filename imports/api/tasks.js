@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 // Create tasks collection
 import { Mongo } from 'meteor/mongo';
  
