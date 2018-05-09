@@ -1,9 +1,12 @@
+import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
+import { ReactiveDict } from 'meteor/reactive-dict';
 
-import { Tasks } from 'meteor/templating';
- 
+import { Tasks } from '../api/tasks.js';
+
+import './task.js';
 import './body.html';
- 
+
 Template.body.helpers({
   tasks() {
     // Show newest tasks at the top
