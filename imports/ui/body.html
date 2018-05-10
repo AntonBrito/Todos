@@ -1,17 +1,21 @@
 <body>
-    
     <div class="container">
       <header>
-        <h1>Todo List</h1>
+      // Added incomplete dislpay
+        <h1>Todo List ({{incompleteCount}})</h1>
 
         <label class="hide-completed">
           <input type="checkbox" />
           Hide Completed tasks
         </label>
-
-        <form class="new-task">
-          <input type="text" name="text" placeholder="Type to add new tasks" />
-        </form>
+        
+        {{> loginButtons}}
+        <!-- Only show add task from if logged in -->
+        {{#if currentUser}}
+          <form class="new-task">
+            <input type="text" name="text" placeholder="Type to add new tasks" />
+          </form>
+        {{/if}}
       </header>
    
       <ul>
