@@ -1,6 +1,7 @@
 <body>
     <div class="container">
       <header>
+      // Added incomplete dislpay
         <h1>Todo List ({{incompleteCount}})</h1>
 
         <label class="hide-completed">
@@ -8,6 +9,8 @@
           Hide Completed tasks
         </label>
 
+        {{> loginButtons}}
+        
         <form class="new-task">
           <input type="text" name="text" placeholder="Type to add new tasks" />
         </form>
