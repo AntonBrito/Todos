@@ -1,9 +1,11 @@
 <template name="task">
-  <li class="{{#if checked}}checked{{/if}}">
+  <!-- Add private class to private tasks-->
+  <li class="{{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
     <button class="delete">&times;</button>
+
     <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
     
-    // Add private button
+    <!--Add private button-->
     {{#if isOwner}}
       <button class="toggle-private">
         {{#if private}}
@@ -13,7 +15,7 @@
         {{/if}}
       </button>
     {{/if}}
-    
+
     <!--Display username next to task, and it add a spacebar statement to display-->
     <span class="text"><strong>{{username}}</strong> - {{text}}</span>
     </li>
