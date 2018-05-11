@@ -2,6 +2,18 @@
   <li class="{{#if checked}}checked{{/if}}">
     <button class="delete">&times;</button>
     <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+    
+    // Add private button
+    {{#if isOwner}}
+      <button class="toggle-private">
+        {{#if private}}
+          Private
+        {{else}}
+          Public
+        {{/if}}
+      </button>
+    {{/if}}
+    
     <!--Display username next to task, and it add a spacebar statement to display-->
     <span class="text"><strong>{{username}}</strong> - {{text}}</span>
     </li>
